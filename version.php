@@ -32,6 +32,6 @@ $plugin->component = 'block_aws_chat';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '0.0.1';
     $plugin->dependencies = array(
-        'local_aws' => 2323102700
+        'local_aws' => 2023102700
 );
 
