@@ -1,0 +1,74 @@
+/*
+ * AWS Chat
+ *
+ * @package    blocks
+ * @subpackage aws_chat
+ * @copyright 2024, Angelo Calò <angelo.calo@unipd.it>, Davide Ferro <davide.ferro@unipd.it>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+*/
+
+.block_aws_chat #center { text-align: center; }
+table td {
+    padding: 3px 8px;
+}
+.block_aws_chat #conversation {
+    max-height: 400px;
+    overflow: auto;
+    min-height: 200px;
+    border: 1px solid #c6c6c6;
+    border-radius: 10px !important;
+    margin-top:15px;
+}
+.block_aws_chat #conversation p {
+    padding: 5px 15px;
+    width: 100%;
+    background-color: #f8f9fd;
+    border:none;
+}
+.block_aws_chat #conversation p.human {
+    text-align: right;
+    background-color: #f4f4f4;
+    max-width: 90%;
+    margin-left: auto;
+    margin-bottom: 5px !important;
+}
+.block_aws_chat #conversation p.assistant {
+    text-align: left;
+    background-color: #9c0014!important;
+    color: #f4f4f4;
+    width: 90%;
+    font-weight:500;
+}
+/*h1 { font-size: 50px; }*/
+/*body { font: 20px Helvetica, sans-serif; color: #333; }*/
+/*a, a:hover, a:visited {
+color:  rgb(0, 0, 238);
+}
+*/
+#star{
+    text-align: center;
+}
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    text-align: center;
+}
+
+.star-rating input[type=radio] {
+    display: none
+}
+
+.star-rating label {
+    color: #bbb;
+    font-size: 22px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type=radio]:checked ~ label {
+    color: #9c0014!important;
+}
