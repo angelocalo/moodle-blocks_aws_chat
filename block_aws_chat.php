@@ -92,9 +92,9 @@ class block_aws_chat extends block_base {
         $message_no_user = get_string('res_no_user', 'block_aws_chat',['assistantname' => get_config("block_aws_chat", "assistantname")]);
 
         if($USER)
-            $res = $message." <b>".get_config("block_aws_chat", "button_text")."</b>";
+            $res = $message." <b>".get_string("button_text","block_aws_chat")."</b>";
         else
-            $res = $message_no_user." <b>".get_config("block_aws_chat", "button_text")."</b>";
+            $res = $message_no_user." <b>".get_string("button_text","block_aws_chat")."</b>";
 
         $prompt2 = "\n " . get_string('prompt2', 'block_aws_chat');
       
@@ -114,7 +114,7 @@ class block_aws_chat extends block_base {
                 <div class="form-group">
                   <textarea class="form-control" name="question" id="question" rows="3" placeholder='.$placeholder.'></textarea>
                 </div>
-                <button type="submit" id="run" class="btn btn-primary">'.get_config("block_aws_chat", "button_text").'</button>
+                <button type="submit" id="run" class="btn btn-primary">'.get_string("button_text","block_aws_chat").'</button>
             </form>
 
 
