@@ -24,26 +24,7 @@
 
 
 class block_aws_chat_edit_form extends block_edit_form {
-        /*    protected function specific_definition($mform) {
-                global $CFG, $DB;
-        
-                // Fields for editing Course Fisher block title and contents.
-                $mform->addElement('header', 'config_header', get_string('blocksettings', 'block'));
-        
-                $mform->addElement('text', 'config_title', get_string('configtitle', 'block_aws_chat'));
-                $mform->setType('config_title', PARAM_TEXT);
-        
-                $yesnooptions = array('yes'=>get_string('yes'), 'no'=>get_string('no'));
-        
-                $mform->addElement('select', 'config_enabledock', get_string('enabledock', 'block_aws_chat'), $yesnooptions);
-                if (empty($this->block->config->enabledock) || $this->block->config->enabledock=='yes') {
-                    $mform->getElement('config_enabledock')->setSelected('yes');
-                } else {
-                    $mform->getElement('config_enabledock')->setSelected('no');
-                }
-            }
-        }
-        */
+       
             protected function specific_definition($mform) {
                 global $CFG, $DB;
         
