@@ -18,7 +18,7 @@
  * Version metadata for the block_aws_chat plugin.
  *
  * @package   block_aws_chat
- * @copyright 2024, Angelo Calò <angelo.calo@unipd.it>
+ * @copyright 2024, Angelo Calò <angelo.calo@unipd.it>, Davide Ferro <davide.ferro@unipd.it>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
