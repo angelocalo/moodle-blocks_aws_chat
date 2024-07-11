@@ -28,7 +28,7 @@ $settings->add(new admin_setting_configtext(
     'block_aws_chat/title',
     get_string('title', 'block_aws_chat'),
     get_string('titledesc', 'block_aws_chat'),
-    get_string('pluginname', 'block_aws_chat'),'',
+    get_string('pluginname', 'block_aws_chat'),
     PARAM_TEXT
 ));
 
@@ -101,14 +101,14 @@ $settings->add(new admin_setting_configselect(
     get_string('regiondesc', 'block_aws_chat'),
     'eu-central-1',
     [
-        'eu-central-1' => 'eu-central-1',   //Frankfurt
-        'eu-west-1' => 'eu-west-1',         //Ireland
-        'eu-west-3' => 'eu-west-3',         //Paris
-        'us-east-1' => 'us-east-1',         //N.Virginia
-        'us-west-2' => 'us-west-2',         //Oregon
-        'ap-northeast-1' => 'ap-northeast-1',//Tokyo
-        'ap-southeast-1' => 'ap-southeast-1',//Singapore
-        'ap-southeast-2' => 'ap-southeast-2'//Sydney
+        'eu-central-1' => 'eu-central-1',       //Frankfurt
+        'eu-west-1' => 'eu-west-1',             //Ireland
+        'eu-west-3' => 'eu-west-3',             //Paris
+        'us-east-1' => 'us-east-1',             //N.Virginia
+        'us-west-2' => 'us-west-2',             //Oregon
+        'ap-northeast-1' => 'ap-northeast-1',    //Tokyo
+        'ap-southeast-1' => 'ap-southeast-1',    //Singapore
+        'ap-southeast-2' => 'ap-southeast-2'    //Sydney
     ]
 ));
 
