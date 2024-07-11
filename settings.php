@@ -48,7 +48,6 @@ $settings->add(new admin_setting_configtext(
     PARAM_TEXT
 ));
 
-//$settings->add(new admin_setting_configtext(
 $settings->add(new admin_setting_configpasswordunmask(
     'block_aws_chat/secret',
     get_string('secret', 'block_aws_chat'),
@@ -112,14 +111,6 @@ $settings->add(new admin_setting_configselect(
         'ap-southeast-2' => 'ap-southeast-2'//Sydney
     ]
 ));
-
-/*$settings->add(new admin_setting_configtextarea(
-    'block_aws_chat/sourceoftruth',
-    get_string('sourceoftruth', 'block_aws_chat'),
-    get_string('sourceoftruthdesc', 'block_aws_chat'),
-    '',
-    PARAM_TEXT
-));*/
 
 // Advanced Settings //
 
