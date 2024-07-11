@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 
 
-$plugin->version = 2024012500;
+$plugin->version = 2024071101;
 $plugin->requires = 2022041600;
 $plugin->component = 'block_aws_chat';
 $plugin->maturity = MATURITY_STABLE;
