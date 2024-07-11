@@ -112,21 +112,14 @@ $settings->add(new admin_setting_configselect(
     ]
 ));
 
+
 // Advanced Settings //
 
 $settings->add(new admin_setting_heading(
     'block_aws_chat/advanced', 
     get_string('advanced', 'block_aws_chat'),
-    get_string('advanceddesc', 'block_aws_chat'),
+    get_string('advanceddesc', 'block_aws_chat')
 ));
-
-$settings->add(new admin_setting_configcheckbox(
-    'block_aws_chat/allowinstancesettings',
-    get_string('allowinstancesettings', 'block_aws_chat'),
-    get_string('allowinstancesettingsdesc', 'block_aws_chat'),
-    0
-));
-
 
 $settings->add(new admin_setting_configtext(
     'block_aws_chat/temperature',
