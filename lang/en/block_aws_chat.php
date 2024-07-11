@@ -24,17 +24,22 @@
 
 
 
-
 $string['pluginname'] = 'AWS Chat Block';
 $string['block_aws_chat'] = 'AWS Chat';
 $string['aws_chat'] = 'AWS Chat';
 $string['aws_chat:addinstance'] = 'Add a new AWS Chat block';
 $string['aws_chat:myaddinstance'] = 'Add a new AWS Chat block to the My Moodle page';
 $string['privacy:metadata'] = 'The AWS Chat block stores ..........';
-$string['res'] = 'Hi {$a->name}, I\'m <B>{$a->assistantname},</B> your assistant for Moodle. Enter your question and click ';
-$string['res_no_user'] = 'Hi, I\'m <B>{$a->assistantname},</B> your assistant for Moodle. Enter your question and click ';
+$string['res_set'] = 'Welcome message';
+$string['config_welcome'] = 'Welcome message';
+$string['res'] = 'Hi {$a->name}, I\'m <B>{$a->assistantname},</B> ';
+$string['res2'] = 'your assistant in Moodle. Enter your question and click ';
+$string['resdesc'] = 'Enter the welcome message to use after "Hello NAME SURNAME I am ASSISTANT NAME"';
+$string['res_no_user'] = 'Hi, I\'m <B>{$a->assistantname},</B> your assistant in Moodle. Enter your question and click ';
 $string['button_text'] = 'Submit';
-$string['button_textdesc'] = 'Insert the text that you want on Button';
+$string['button_textdesc'] = 'Enter the text tha you want on Button';
+$string['demo_question'] = 'Demo question';
+$string['demo_questiondesc'] = 'Enter a demo question';
 $string['prompt2'] = 'Example question: What is the database activity for?';
 $string['placeholder'] = 'Your&nbsp;question';
 $string['title'] = 'Block title';
@@ -53,6 +58,8 @@ $string['secret'] = 'Secret';
 $string['secretdesc'] = 'Secret key that the AI will use for the user internally. ';
 $string['prompt'] = 'Completion prompt';
 $string['promptdesc'] = 'The prompt the AI will be given before the conversation transcript';
+$string['moodle_prompt'] = 'Completion Moodle prompt';
+$string['moodle_promptdesc'] = 'The additional prompt the AI will be given before the conversation transcript, if the block instance referrence is not set.';
 $string['sourceoftruth'] = 'Source of truth';
 $string['sourceoftruthdesc'] = 'Although the AI is very capable out-of-the-box, if it doesn\'t know the answer to a question, it is more likely to give incorrect information confidently than to refuse to answer. In this textbox, you can add common questions and their answers for the AI to pull from. Please put questions and answers in the following format: <pre>Q: Question 1<br />A: Answer 1<br /><br />Q: Question 2<br />A: Answer 2</pre>';
 $string['advanced'] = 'Advanced';
@@ -64,9 +71,9 @@ $string['temperaturedesc'] = 'Controls randomness: Lowering results in less rand
 $string['temperature_student'] = 'Temperaturefor student user';
 $string['temperature_studentdesc'] = 'Controls randomness for student user: Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.';
 $string['maxlength_student'] = 'Maximum length for student user';
-$string['maxlength_studentdesc'] = 'The maximum number of token to generate for student user. Requests can use up to 2,048 tokens shared between prompt and completion. The exact limit varies by model. (One token is roughly 4 characters for normal English text)';
+$string['maxlength_studentdesc'] = 'The maximum number of token to generate for student user. Requests can use up to 2,048 or 4,000 tokens shared between prompt and completion. The exact limit varies by model. (One token is roughly 4 characters for normal English text)';
 $string['maxlength'] = 'Maximum length';
-$string['maxlengthdesc'] = 'The maximum number of token to generate. Requests can use up to 2,048 tokens shared between prompt and completion. The exact limit varies by model. (One token is roughly 4 characters for normal English text)';
+$string['maxlengthdesc'] = 'The maximum number of token to generate. Requests can use up to 2,048 or 4,000 tokens shared between prompt and completion. The exact limit varies by model. (One token is roughly 4 characters for normal English text)';
 $string['configtitle'] = 'Title';
 $string['enablecollaps'] = 'Allow the user to collapse this block';
 $string['enabledock'] = 'Allow the user to dock this block';
@@ -79,3 +86,10 @@ $string['config_sourceoftruth'] = 'Source of truth';
 $string['config_sourceoftruth_help'] = "You can add information here that the AI will pull from when answering questions. The information should be in question and answer format exactly like the following:\n\nQ: When is section 3 due?<br />A: Thursday, March 16.\n\nQ: When are office hours?<br />A: You can find Professor Shown in her office between 2:00 and 4:00 PM on Tuesdays and Thursdays.";
 $string['problem_vote'] = "Some problem occured, please try again.";
 $string['vote_ok'] = "Your vote is saved.";
+$string['allowinstancesettings'] = 'Instance-level settings';
+$string['allowinstancesettingsdesc'] = 'This setting will allow teachers, or anyone with the capability to add a block in a context, to adjust settings at a per-block level.'; 
+$string['config_reference'] = "Custom reference";
+$string['config_reference_help'] = "You can add local custom reference here.";
+$string['config_temperature'] = "Temperature";
+$string['config_temperature_help'] = "Controls randomness: Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive.";
+
