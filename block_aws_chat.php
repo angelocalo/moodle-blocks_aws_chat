@@ -22,14 +22,10 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
- //namespace block_aws_chat;
-
-
 global $CFG;
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->libdir . '/moodlelib.php');
-
 
 class block_aws_chat extends block_base {
     
@@ -50,17 +46,17 @@ class block_aws_chat extends block_base {
 
    
 
- public function instance_allow_multiple() {
-       return false;
-  }
+   public function instance_allow_multiple() {
+         return false;
+    }
 
     public function instance_can_be_collapsed() {
       return (parent::instance_can_be_collapsed() && (empty($this->config->enablecollaps) || $this->config->enablecollaps=='yes'));
-  }
+    }
 
-  public function instance_can_be_docked() {
-      return (parent::instance_can_be_docked() && (empty($this->config->enabledock) || $this->config->enabledock=='yes'));
-  }
+    public function instance_can_be_docked() {
+        return (parent::instance_can_be_docked() && (empty($this->config->enabledock) || $this->config->enabledock=='yes'));
+    }
 
     /**
      * Gets the block contents.
@@ -73,8 +69,7 @@ class block_aws_chat extends block_base {
         if ($this->content !== null) {
             return $this->content;
         }
-       
-
+     
       $this->content = new stdClass;
       $this->content->items = array();
       $this->content->footer = '';
@@ -114,7 +109,7 @@ class block_aws_chat extends block_base {
                 <div class="form-group">
                   <textarea class="form-control" name="question" id="question" rows="3" placeholder='.$placeholder.'></textarea>
                 </div>
-                <button type="submit" id="run" class="btn btn-primary">'.get_string("button_text","block_aws_chat").'</button>
+                <button type="submit" id="run" class="btn btn-primary"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M232,127.89a16,16,0,0,1-8.18,14L55.91,237.9A16.14,16.14,0,0,1,48,240a16,16,0,0,1-15.05-21.34L60.3,138.71A4,4,0,0,1,64.09,136H136a8,8,0,0,0,8-8.53,8.19,8.19,0,0,0-8.26-7.47H64.16a4,4,0,0,1-3.79-2.7l-27.44-80A16,16,0,0,1,55.85,18.07l168,95.89A16,16,0,0,1,232,127.89Z"></path></svg></button>
             </form>
 
 
@@ -122,8 +117,6 @@ class block_aws_chat extends block_base {
             </div></br>
            ';
 
-            
-    
         return $this->content;
         
     }
