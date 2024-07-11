@@ -25,7 +25,7 @@ $(document).ready(function(){
     const path = M.cfg.wwwroot + "/blocks/aws_chat/";
     const invoker = path + "moodle_assistant_invoke.php";
     const dots = path + "res/typing-dots.gif";
-    var currentcourse_sess =$("#nm_sess").val();
+    var currentcourse_sess = $("#nm_sess").val();
     var currentcourse_id = $("#courseid").val();
 
     $('#runbedrock').submit(function(event){
@@ -68,6 +68,7 @@ $(document).ready(function(){
             inputs.prop("disabled", false);
             $("#question").val("");
             $('form #run').removeAttr("disabled");
+            $('#question').focus();
         });
 
     });
