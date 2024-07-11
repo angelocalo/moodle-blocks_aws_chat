@@ -24,17 +24,21 @@
 
 
 
-
 $string['pluginname'] = 'Blocco Chat AWS';
 $string['block_aws_chat'] = 'Chat AWS';
 $string['aws_chat'] = 'Chat AWS';
 $string['aws_chat:addinstance'] = 'Aggiungi un nuovo blocco Chat AWS';
 $string['aws_chat:myaddinstance'] = 'Aggiungi un nuovo blocco Chat AWS alla pagina Il mio Moodle';
 $string['privacy:metadata'] = 'Il blocco Chat AWS memorizza ..........';
-$string['res'] = 'Ciao {$a->name}, sono <B>{$a->assistantname},</B> il tuo assistente Moodle. Inserisci la tua domanda e clicca ';
-$string['res_no_user'] = 'Ciao, sono <B>{$a->assistantname},</B> il tuo assistente Moodle. Inserisci la tua domanda e clicca ';
+$string['res_set'] = 'Messaggio di benvenuto';
+$string['res'] = 'Ciao {$a->name}, sono <B>{$a->assistantname},</B> ';
+$string['res2'] = 'il tuo assistente in Moodle. Inserisci la tua domanda e clicca ';
+$string['resdesc'] = 'Inserisci il messaggio di benvenuto da usare dopo "Ciao NOME COGNOME sono NOMEASSISTENTE"';
+$string['res_no_user'] = 'Ciao, sono <B>{$a->assistantname},</B> il tuo assistente in Moodle. Inserisci la tua domanda.';
 $string['button_text'] = 'Elabora';
 $string['button_textdesc'] = 'Inserisci il testo che desideri nel pulsante';
+$string['demo_question'] = 'Domanda di esempio';
+$string['demo_questiondesc'] = 'Inserisci una domanda di esempio';
 $string['prompt2'] = 'Domanda di esempio: a cosa serve l\'attività del database?';
 $string['placeholder'] = 'La&nbsp;tua&nbsp;domanda';
 $string['title'] = 'Titolo del blocco';
@@ -44,15 +48,17 @@ $string['restrictusagedesc'] = 'Se questa casella è selezionata, solo gli utent
 $string['apikey'] = 'API Key AWS';
 $string['apikeydesc'] = 'La API Key per il tuo account AWS';
 $string['region'] = 'Regione';
-$string['regiondesc'] = 'La regione AWS';
+$string['regiondesc'] = 'La regione AWS. Per questa regione, su Amazon Bedrock, deve essere disponibile e attivato Claude 3 Sonnet.';
 $string['assistant'] = 'Assistente';
 $string['assistantdesc'] = 'L\'assistente predefinito collegato al tuo account AWS che desideri utilizzare per la risposta';
-$string['assistantname'] = 'Nome dell\'assistente';
+$string['assistantname'] = 'Nome dell\'assisente';
 $string['assistantnamedesc'] = 'Il nome che l\'IA utilizzerà internamente per se stessa. Viene utilizzato anche per le intestazioni dell\'interfaccia utente nella finestra di chat.';
 $string['secret'] = 'Chiave privata';
 $string['secretdesc'] = 'Chiave segreta che l\'IA utilizzerà internamente per l\'utente. ';
 $string['prompt'] = 'Richiesta di completamento';
 $string['promptdesc'] = 'Il messaggio che verrà dato all\'IA prima della trascrizione della conversazione';
+$string['moodle_prompt'] = 'Completion Moodle prompt';
+$string['moodle_promptdesc'] = 'The additional prompt the AI will be given before the conversation transcript, if the block instance referrence is not set.';
 $string['sourceoftruth'] = 'Fonte della verità';
 $string['sourceoftruthdesc'] = 'Sebbene l\'IA sia molto capace fin dall\'inizio, se non conosce la risposta a una domanda, è più probabile che fornisca con sicurezza informazioni errate piuttosto che rifiutarsi di rispondere. In questa casella di testo puoi aggiungere domande comuni e le relative risposte da cui l\'IA può attingere. Si prega di inserire domande e risposte nel seguente formato: <pre>D: Domanda 1<br />R: Risposta 1<br /><br />D: Domanda 2<br />R: Risposta 2</pre>';
 $string['advanced'] = 'Avanzato';
@@ -64,9 +70,9 @@ $string['temperaturedesc'] = 'Controlla la casualità: la riduzione dei risultat
 $string['temperature_student'] = 'Temperatura per l\'utente studente';
 $string['temperature_studentdesc'] = 'Controlla la casualità per l\'utente studente: la riduzione dei risultati comporta completamenti meno casuali. Quando la temperatura si avvicina allo zero, il modello diventerà deterministico e ripetitivo.';
 $string['maxlength_student'] = 'Lunghezza massima per l\'utente studente';
-$string['maxlength_studentdesc'] = 'Il numero massimo di token da generare per l\'utente studente. Le richieste possono utilizzare fino a 2.048 token condivisi tra la richiesta e il completamento. Il limite esatto varia in base al modello. (Un token contiene circa 4 caratteri per il normale testo inglese)';
+$string['maxlength_studentdesc'] = 'Il numero massimo di token da generare per l\'utente studente. Le richieste possono utilizzare fino a 2.048 o 4.000 token condivisi tra la richiesta e il completamento. Il limite esatto varia in base al modello. (Un token contiene circa 4 caratteri per il normale testo inglese)';
 $string['maxlength'] = 'Lunghezza massima';
-$string['maxlengthdesc'] = 'Il numero massimo di token da generare. Le richieste possono utilizzare fino a 2.048 token condivisi tra la richiesta e il completamento. Il limite esatto varia in base al modello. (Un token contiene circa 4 caratteri per il normale testo inglese)';
+$string['maxlengthdesc'] = 'Il numero massimo di token da generare. Le richieste possono utilizzare fino a 2.048 o 4.000 token condivisi tra la richiesta e il completamento. Il limite esatto varia in base al modello. (Un token contiene circa 4 caratteri per il normale testo inglese)';
 $string['configtitle'] = 'Titolo';
 $string['enablecollaps'] = 'Consenti all\'utente di comprimere questo blocco';
 $string['enabledock'] = 'Consenti all\'utente di ancorare questo blocco';
@@ -79,3 +85,4 @@ $string['config_sourceoftruth'] = 'Fonte della verità';
 $string['config_sourceoftruth_help'] = "Puoi aggiungere qui le informazioni che l\'IA utilizzerà quando risponde alle domande. Le informazioni dovrebbero essere in formato domanda e risposta esattamente come il seguente:\n\nD: Quando scade la sezione 3?<br />R: Giovedì 16 marzo.\n\nD: Quali sono gli orari di ricevimento?<br />R: Puoi trovare il professor Shown nel suo ufficio tra le 14:00 e le 16:00 il martedì e il giovedì.";
 $string['problem_vote'] = "Si è verificato un problema, riprova.";
 $string['vote_ok'] = "Il tuo voto è salvato";
+
