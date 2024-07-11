@@ -28,7 +28,7 @@ class block_aws_chat_edit_form extends block_edit_form {
             protected function specific_definition($mform) {
                 global $CFG, $DB;
         
-                // Fields for editing Course Fisher block title and contents.
+                // Fields for editing block title and contents.
                 $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));
         
                 $mform->addElement('text', 'config_title', get_string('configtitle', 'block_aws_chat'));
