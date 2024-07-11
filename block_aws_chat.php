@@ -87,9 +87,9 @@ class block_aws_chat extends block_base {
         $message_no_user = get_string('res_no_user', 'block_aws_chat',['assistantname' => get_config("block_aws_chat", "assistantname")]);
 
         if($USER)
-            $res = $message." <b>".get_string("button_text","block_aws_chat")."</b>";
+            $res = $message;
         else
-            $res = $message_no_user." <b>".get_string("button_text","block_aws_chat")."</b>";
+            $res = $message_no_user;
 
         $prompt2 = "\n " . get_string('prompt2', 'block_aws_chat');
       
